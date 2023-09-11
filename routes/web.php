@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
+use App\Http\Controllers\Admin\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 //Admin Routes
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => [/*AdminSession::class, AdminLayoutData::class, NavBar::class*/]], function () {
 
+    Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('index');
+
     // User Route
     Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
-        Route::get('', [AdminDashboardController::class, 'index'])->name('index');
+        Route::get('', [UserController::class, 'index'])->name('index');
     });
 
 });
