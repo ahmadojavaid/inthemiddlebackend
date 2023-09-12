@@ -90,7 +90,7 @@
 {{--            </li>--}}
             <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="User">User</span></a>
                 <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="app-user-list.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">List</span></a>
+                    <li><a class="d-flex align-items-center" href="{{route('admin.users.index')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">List</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="app-user-list.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Blocked</span></a></li>
 {{--                    </li>--}}
@@ -127,9 +127,9 @@
 {{--                    </li>--}}
                     <li><a class="d-flex align-items-center" href="page-profile.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Profile">Reported</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="page-faq.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">Approved</span></a>
+                    <li><a class="d-flex align-items-center" href="{{route('admin.jobs.index')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">Approved</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="page-knowledge-base.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Knowledge Base">Pending</span></a>
+                    <li><a class="d-flex align-items-center" href="{{route('admin.jobs.index')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Knowledge Base">Pending</span></a>
                     </li>
 {{--                    <li><a class="d-flex align-items-center" href="page-pricing.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pricing">Pricing</span></a>--}}
 {{--                    </li>--}}

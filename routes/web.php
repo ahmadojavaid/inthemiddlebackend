@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\Business\BusinessController;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
+use App\Http\Controllers\Admin\Job\JobController;
 use App\Http\Controllers\Admin\User\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +31,24 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => [/*AdminSes
     // User Route
     Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
         Route::get('', [UserController::class, 'index'])->name('index');
+        Route::post('block', [UserController::class, 'block'])->name('block');
+        Route::post('delete', [UserController::class, 'delete'])->name('delete');
+    });
+
+    // Jobs Route
+    Route::group(['prefix' => 'jobs', 'as' => 'jobs.'], function () {
+        Route::get('', [JobController::class, 'index'])->name('index');
+        Route::get('detail/{id}', [JobController::class, 'detail'])->name('detail');
+        Route::post('block', [JobController::class, 'block'])->name('block');
+        Route::post('delete', [JobController::class, 'delete'])->name('delete');
+    });
+
+    // Business Route
+    Route::group(['prefix' => 'businesses', 'as' => 'businesses.'], function () {
+        Route::get('', [BusinessController::class, 'index'])->name('index');
+        Route::get('detail/{id}', [BusinessController::class, 'detail'])->name('detail');
+        Route::post('block', [BusinessController::class, 'block'])->name('block');
+        Route::post('delete', [BusinessController::class, 'delete'])->name('delete');
     });
 
 });

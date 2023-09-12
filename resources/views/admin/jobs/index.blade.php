@@ -25,22 +25,22 @@
                                     <table class="dt-row-grouping table">
                                         <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
+                                            <th>Job Name</th>
+                                            <th>Date</th>
+                                            <th>Location</th>
                                             <th>Experience Level</th>
-                                            <th>City</th>
-                                            <th>Phone</th>
+                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($users as $user)
+                                        @foreach($jobs as $job)
                                         <tr>
-                                            <td>{{$user->first_name ?? '--'}}</td>
-                                            <td>{{$user->email ?? '--'}}</td>
-                                            <td>{{$user->experience_level ?? '--'}}</td>
-                                            <td>{{$user->city ?? '--'}}</td>
-                                            <td>{{$user->phone ?? '--'}}</td>
+                                            <td>{{$job->j_name ?? '--'}}</td>
+                                            <td>{{$job->j_date ?? '--'}}</td>
+                                            <td>{{$job->j_location ?? '--'}}</td>
+                                            <td>{{$job->j_exp_lvl ?? '--'}}</td>
+                                            <td>{{$job->j_description	 ?? '--'}}</td>
 
                                             <td>
                                                 <div class="dropdown">
@@ -64,11 +64,11 @@
                                         </tbody>
                                         <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
+                                            <th>Job Name</th>
+                                            <th>Date</th>
+                                            <th>Location</th>
                                             <th>Experience Level</th>
-                                            <th>City</th>
-                                            <th>Phone</th>
+                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                         </tfoot>
